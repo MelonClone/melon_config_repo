@@ -1,0 +1,39 @@
+logging:
+  level:
+    root: info
+
+server:
+  address: localhost
+  port: 8099
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+# The OAuth2 server definition that would be used to send the authorization requests to
+# authserver:
+#     hostname: localhost
+#     port: 8899
+#     contextPath: userauth
+
+spring:
+  jpa:
+    show-sql: false
+    generate-ddl: true
+    # database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/melon_clone?serverTimezone=UTC&charaterEncoding=UTF-8
+    username: melon_admin
+    password: melonclone2020
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    platform: mysql
+    initialization-mode: always
+
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+jwt:
+  secret: aaaaaaaaaaaaaaaaabbbbbbbbbbbbbcc # 32글자 이상의 비밀 키

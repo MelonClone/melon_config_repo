@@ -1,0 +1,32 @@
+server:
+  address: localhost
+  port: 8055
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  jpa:
+    show-sql: false
+    generate-ddl: true
+    # database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/melon_clone?serverTimezone=UTC&charaterEncoding=UTF-8
+    username: melon_admin
+    password: melonclone2020
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    platform: mysql
+    initialization-mode: always
+  
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    
+  jackson:
+    property-naming-strategy: SNAKE_CASE
