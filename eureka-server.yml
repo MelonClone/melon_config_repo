@@ -8,7 +8,7 @@ server:
 # for server discovery
 eureka:
   instance:
-    hostname: localhost
+    hostname: 172.19.0.101
   # freemarker:
   #   template-loader-path: classpath:/templates/
   #   prefer-file-system-access: false

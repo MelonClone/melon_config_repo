@@ -4,7 +4,7 @@ server:
 
 # The OAuth2 server definition that would be used to send the authorization requests to
 authserver:
-    hostname: localhost
+    hostname: 172.19.0.121
     port: 8899
     contextPath: userauth
 
@@ -24,16 +24,16 @@ zuul:
     user:
       path: /v1/auth/**
       stripPrefix: false
-      url: http://localhost:8899/
+      url: http://172.19.0.121:8899/
     api-server:
       path: /v1/**
       stripPrefix: false
-      url: http://localhost:8099/
+      url: http://172.19.0.131:8099/
 # Define the Eureka server that handles service registration
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://172.19.0.101:8761/eureka/
 
 # Define settings for Single-Sign-On with OAuth2; this means that we need to relay the OAuth token
 # to the subsequent resources that are proxied by the Zuul api gateway.

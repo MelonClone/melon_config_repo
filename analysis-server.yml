@@ -1,11 +1,10 @@
 server:
-  address: localhost
   port: 8055
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://172.19.0.101:8761/eureka/
 
 spring:
   jpa:
